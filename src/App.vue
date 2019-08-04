@@ -1,18 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <TodoList msg="Welcome to Your Vue.js App"/>
+    <CreateTodo v-on:create-todo="addTodo($event)"/>
+    <TodoList v-bind:todos="todos"/>
   </div>
 </template>
 
 <script>
 import TodoList from './components/TodoList.vue'
+import CreateTodo from './components/CreateTodo.vue'
 
 export default {
   name: 'app',
-  components: {
-    TodoList
-  }
+  data() {
+    return {
+      todos: [],
+    };
+  },
+  methods: {
+    addTodo(newTodo) {
+      this.todos.push(newTodo);
+    },
+  },components: {
+    TodoList,
+    CreateTodo
+  },
+
 }
 </script>
 
