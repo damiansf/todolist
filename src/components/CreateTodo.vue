@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input v-model="title" placeholder="Add Todo" v-on:keyup.enter="create">
+    <input v-model="title" placeholder="Add Todo" v-on:keyup.enter="create" class="todo-input">
   </div>
 </template>
 
@@ -30,7 +30,16 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.todo-input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    background: rgba(0, 0, 0, 0.003);
+    position: relative;
+    width: 40%;
+    margin: 0;
+    font-size: 24px;
+    color: inherit;
+    outline: none;
+}
 </style>

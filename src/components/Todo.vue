@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2>{{todo.title}}</h2>
-    <button v-on:click="deleteTodo(todo)">Delete</button>
-    <button v-show="!todo.done" v-on:click="completeTodo(todo)">Complete</button>
-    <button v-show="todo.done" v-on:click="restoreTodo(todo)">Restore</button>
+    <span>{{todo.title}}</span>
+    <img src="../assets/checkmark.png" v-show="!todo.done" v-on:click="completeTodo(todo)">
+    <img src="../assets/restore.png" v-show="todo.done" v-on:click="restoreTodo(todo)">
+    <img src="../assets/trashcan.png" v-on:click="deleteTodo(todo)">
   </div>
 </template>
 
@@ -25,7 +25,14 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+span {
+  padding-right: 10px;
+  font-size: 20px;
+}
 </style>

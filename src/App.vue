@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Todos</h1>
     <CreateTodo v-on:create-todo="addTodo($event)"/>
     <TodoList v-bind:todos="todos"/>
   </div>
@@ -37,4 +38,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
