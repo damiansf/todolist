@@ -1,5 +1,7 @@
 # todolist
 
+Basic todolist application written using Vue.js
+
 ## Project setup
 ```
 npm install
