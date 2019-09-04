@@ -1,6 +1,7 @@
 # todolist
 
 Basic todolist application written using Vue.js
+https://damiansf.github.io/todolist/
 
 ## Project setup
 ```
